@@ -3,20 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate_moves.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-moua <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-moua <ael-moua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:15:32 by ael-moua          #+#    #+#             */
-/*   Updated: 2024/01/11 11:16:09 by ael-moua         ###   ########.fr       */
+/*   Updated: 2024/06/15 13:25:00 by ael-moua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "./push_swap_bonus.h"
+
 
 static void	ft_reverse_rotate(t_stack_node **stack)
 {
 	t_stack_node	*tmp;
     t_stack_node    *pos;
 
+	if (!*stack)
+	{
+		ft_putstr_fd("KO\n",1);
+		exit(1);
+	}
     pos = *stack;
     tmp = *stack;
     while (pos->next->next != NULL)
@@ -29,16 +35,13 @@ static void	ft_reverse_rotate(t_stack_node **stack)
 void rra(t_stack_node **stack)
 {
     ft_reverse_rotate(stack);
-    ft_putstr_fd("rra\n",1);
 }
 void rrb(t_stack_node **stack)
 {
     ft_reverse_rotate(stack);
-    ft_putstr_fd("rrb\n",1);
 }
 void rrr(t_stack_node **stacka,t_stack_node **stackb)
 {
     ft_reverse_rotate(stacka);
     ft_reverse_rotate(stackb);
-    ft_putstr_fd("rrr\n",1);
 }

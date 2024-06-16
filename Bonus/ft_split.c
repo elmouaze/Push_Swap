@@ -3,26 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-moua <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-moua <ael-moua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 04:18:33 by ael-moua          #+#    #+#             */
-/*   Updated: 2024/01/10 04:18:36 by ael-moua         ###   ########.fr       */
+/*   Updated: 2024/06/15 11:54:04 by ael-moua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	size;
+#include "./push_swap_bonus.h"
 
-	size = 0;
-	while (*s)
-	{
-		size++;
-		s++;
-	}
-	return (size);
-}
 
 static int	ft_count_words(char const *s, char c)
 {
